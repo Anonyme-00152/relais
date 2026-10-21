@@ -150,7 +150,7 @@ curl -X POST ${B}/api/v1/folders \\
 # 2. Réserver le fichier
 curl -X POST ${B}/api/v1/folders/$ID/files \\
   -H "Authorization: Bearer $CLE" -H "Content-Type: application/json" \\
-  -d '{"name":"video.mp4","size":2147483648}'
+  -d '{"name":"video.mp4","size":52428800}'
 
 # 3. Envoyer les morceaux (8 Mo conseillés), puis finaliser
 curl -X PUT "${B}/api/v1/folders/$ID/files/$FID/chunk?name=video.mp4&offset=0" \\
